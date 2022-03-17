@@ -1,0 +1,136 @@
+ALGORITHM ARRAY_Somme
+VAR
+    Array1: Array of float[5];
+    s, i :float;
+BEGIN
+    for i  from 1 to 5 do
+    write("entrer les elts de tableau", i);
+    read(Array1[i]);
+    end for
+    s:= 0;
+    for i from 1 to 5 do
+    s:= s +Array1[i];
+    end for
+    for i from 1 to 5 do
+    write("les elements sont", Array1[i]);
+    end for
+    write("la somme est", s);
+END
+// Calcule sommme produit, moyenne
+ALGORITHM somme_produit_moyenne
+VAR
+    T: Array[1..50];
+    N,i / interger;
+    S,P,M: float
+BEGIN
+    if N= 0 then 
+      write("le tableau est vide")
+      else
+      S:= 0; P:=1;
+       for i from 1 to 50 do
+      S:= S+T[i];
+      P:=P*T[i];
+      end for
+      M:= S/N ;
+      write("la somme est," S);
+      write("le produit des eles est", P);
+      write("la moyenne est", M);
+      end if
+END
+
+//Algorithme  recherche_toutes_occurences ;
+ALGORITHM Occurences
+VAR
+    T: Array of float[1..100]
+    N,i   :  interger ;
+     X : float ;
+     Existe : booléen ;
+BEGIN
+  if N= 0 then
+     write("le tableau est vide :")
+       else
+
+                        write("entrer la valeur de l’élément à chercher " :) ;
+                        read(X) ;
+                        Existe:= false ;
+                        do i from 1  to N  do
+                                if T[i] = X then
+                                               Existe := Vrai ;
+                                               write("lélément à chercher apparait à la position : ",i) ;
+                                end if
+                         end for
+                         if Existe = false then
+                                   write("lélément n’apparait pas dans ce tableau ") ;
+                           end if
+                 end if
+END
+//Ecrire un algorithme permettant  de chercher  la première occurrence d’un élément dans un tableau.
+
+
+ALGORITHM première occurence
+VAR
+    T: Array of float[1..100]
+    P, N,i   :  interger ;
+     X : float ;
+     Existe : booléen ; 
+BEGIN
+  if N= 0 then
+     write("le tableau est vide :")
+       else
+
+                        write("entrer la valeur de l’élément à chercher " :) ;
+                        read(X) ;
+                        Existe:= false ;
+                        i:=1;
+                        while (i< N) & (Existe = false )
+                        if T[i]= X then
+                           Existe = True;
+                           P:= i ;
+                        end if
+                        end while
+                        if Existe = True
+                        then
+                         write("la première occurrence de l’élément dans ce tableau est :",P) ;
+                         else("l'elt n'existe pâs ")
+                 end if  
+END
+
+
+
+
+//Ecrire un algorithme permettant  de calculer le nombre de fois pour lesquelles un  élément  apparait dans un tableau.
+ALGORITHM 
+VAR
+    T   : Array of float [1..100] ;
+              N,i,F   :  interger;
+                X : float ;
+BEGIN
+    if N=0 then
+                               write("le tableau est vide ") ;
+                else
+                        write("entrer la valeur de l’élément à chercher  :") ;
+                        read(X) ;
+                        F := 0 ;
+                        for i from  1  to N  do
+                                if T[i] = X then
+                                               F := F+1 ;
+                                end if
+                         end for
+                                   write("l’élément  apparait" : F,) ;
+                 end if
+END
+//Ecrire un algorithme permettant  d’ajouter un élément a la fin d’un tableau.
+
+ALGORITHM algorithm_name
+VAR
+    T   : Array of float[1..5] ;
+              N :  interger ;
+                X : float ;
+            
+BEGIN                    
+                              
+                               N<--  N+1 ;
+                                T[N] <--  X ;
+                 end if
+
+END

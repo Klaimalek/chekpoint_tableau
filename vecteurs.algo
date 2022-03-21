@@ -1,0 +1,53 @@
+ALGORITHM Dot product
+PROCEDURE dot_product(V1,V2:  : ARRAY_OF float[3];)
+VAR
+    ps:  float
+    i: INTEGER
+BEGIN
+    FOR i FROM 0 TO 2 DO
+        write("donner l'elt",i+1, "du premier vecteur",V1)
+        read(V1(i))
+        write("donner l'elt",i+1, "du premier vecteur",V2)
+        read(V2(i))
+    END_FOR
+    ps:=0;
+    FOR i FROM 0 TO 2  DO
+        ps:= ps+V1(i)*V2(i)
+    END_FOR
+END
+VAR
+   i,n: INTEGER; 
+BEGIN
+    FOR i FROM 0 TO n   DO
+       // dot_product(V1,V2)
+        write("le produit scolaire est", dot_product(V1,V2));
+    END_FOR
+END
+// on utilise les fonctions
+ALGORITHM Dot product
+FUNCTION dot_product (V1,V2:  : ARRAY_OF float[3];) : return float
+VAR
+    ps:  float
+    i: INTEGER
+BEGIN
+    FOR i FROM 0 TO 2 DO
+        write("donner l'elt",i+1, "du premier vecteur",V1)
+        read(V1(i))
+        write("donner l'elt",i+1, "du premier vecteur",V2)
+        read(V2(i))
+    END_FOR
+    ps:=0;
+    FOR i FROM 0 TO 2  DO
+        ps:= ps+V1(i)*V2(i)
+    END_FOR
+     resultat:= ps;
+    return resultat;
+END
+VAR
+   i,n: INTEGER; 
+BEGIN
+    FOR i FROM 0 TO n   DO
+       // dot_product(V1,V2)
+        write("le produit scolaire est", dot_product(V1,V2));
+    END_FOR
+END
